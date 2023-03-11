@@ -19,7 +19,7 @@ section {
 }
 
 
-@media only screen and (max-width:628px){
+@media only screen and (max-width:627px){
     header, footer {
         border: 2px solid blue;
     }
@@ -31,6 +31,27 @@ section {
     }
 }
 
+@media only screen and (min-width: 628px) and (max-width: 1024px) {
+     header, footer {
+        border: 2px solid purple;
+    }
+
+    section {
+       background-color:blue;
+       border: 5px solid black;
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+        header, footer {
+       background-color:yellow;
+    }
+
+    section {
+       background-color:lightblue;
+       border: 1px dotted gray;
+    }
+}
 
 
 
