@@ -24,7 +24,7 @@ console.log(mult(5,6,7))
 //create a function that takes in three numbers. Add the first two numbers and return the remainder of dividing the sum of the first two numbers by the third number
 
 function med(a,b,c) {
-    return ((a + b) %3) 
+    return ((a + b) % c) 
 }
 
 console.log(med(5,6,7))
@@ -46,4 +46,6 @@ function four (a,b,c,d) {
     }
 }
 console.log('its working')
-console.log(four (25, 4, 2, 2))
+console.log(four (25, 4, 1, 7))
+
+

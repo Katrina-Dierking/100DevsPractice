@@ -14,15 +14,15 @@ alert(add)
 // *Functions*
 // Create a function that subtracts 4 numbers and alerts the difference
 
-function sub(a,b,c,d) {
-    return a - b - c -d
+function sub(num1, num2, num3, num4) {
+    return num1 - num2 - num3 - num4
 }
 
 alert(sub(10, 4, 3, 2))
 // Create a function that divides one number by another and returns the remainder
 
-function div (a, b) {
-    return a%b
+function div(num1, num2) {
+  return num1 % num2;
 }
 
 console.log(div(6,4))
@@ -30,21 +30,21 @@ console.log(div(6,4))
 // *Conditionals*
 // Create a function that adds two numbers and if the sum is greater than 50 alert Jumanji
 
-function addTwotoJum(a,b) {
-    if(a + b > 50) {
-        alert ('Jumanji')
-    }
+function addTwotoJum(num1, num2) {
+  if (num1 + num2 > 50) {
+    alert("Jumanji");
+  }
 }
 
 addTwotoJum (5, 8)
 
 // Create a function that multiplys three numbers and if the product is divisible by 3 alert ZEBRA
 
-function multiByThree (a,b,c) {
-    let product = a * b * c
-    if(product %3 === 0) {
-        alert ('Zebra')
-    }
+function multiByThree(num1, num2, num3) {
+  let product = num1 * num2 * num3;
+  if (product % 3 === 0) {
+    alert("Zebra");
+  }
 }
 
 //*Loops*

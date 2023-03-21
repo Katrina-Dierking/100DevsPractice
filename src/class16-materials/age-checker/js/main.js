@@ -52,5 +52,6 @@ function run() {
     }
     
 
+    document.querySelector("#ageChecker").innerText += age
     
 }
