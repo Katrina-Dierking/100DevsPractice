@@ -15,6 +15,7 @@ console.log(num)
 //create a variable that holds a value from the input
 
 let inputVal = document.querySelector("#danceDanceRevolution").value
+// the value is taken on page load> We can move this to the run function so it only loads when the h1 is clicked
 
 //add 25 to that number
 
