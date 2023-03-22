@@ -21,30 +21,35 @@ body {
 }
 header {
     width: 100%;
-    padding: 1%;
+    padding: 2% 2%;
     display:flex;
     justify-content: space-around;
-    border: 1px solid black;
  
 }
 
 nav {
 
     width: 80%;
+    margin-left: 5%;
 
 }
 
 nav a {
     text-decoration: none;
     color:black;
-    padding: 0 3%;
+    padding: 0 2%;
 }
 
-header img {
-    width: 250px;
-    height: 30px;
+header p{
+    font-size: 24px;
     align-items: center;
+    margin-top:-1%;
 } 
+
+header nav+p {
+    font-size: 16px;
+    margin-top:0;
+}
 
 nav a {
     text-decoration: none;
@@ -55,57 +60,142 @@ nav a {
 } 
 main {
     width: 100%;
-    border: 1px solid black;
+    margin-top:-2%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
 
     
-    height:700px;
-    background-image: url("../colored-hair.jpg") ; 
+    height:600px;
+    background-image: url("../colored-hair2.jpg") ; 
     background-repeat: no-repeat;
+   background-size: cover;
+   border-bottom-right-radius: 10%;
+   box-shadow: 5px 5px 15px grey;
+  
 }
 
 
 main>div.title {
-    border: 1px solid red;
-    width: 40%;
+    width: 45%;
     display:flex;
     flex-direction: column;
 
+}
+
+
+main .title h1 {
+    font-size: 68px;
+    margin-top: 23%;
+}
+
+main .title span {
+    color:black;
 }
 .topP , .left{
     display: flex;
     flex-direction: column;
     align-items: left;
-    background-color:blue;
-    width: 40%;
+    background-color: black;
+
+    color:white;
+    width: 20%;
+    padding: 1%;
+
+    margin: 3% 0 5% -25%;
 }
+
+.topP {
+    width: 50%;
+    margin-left: 1%;
+    border-left: 3px solid white;
+}
+
+.left {
+       box-shadow: 5px 5px 15px grey;
+}
+main section>section {
+    width: 70%;
+}
+
+main section>section span {
+    font-size: 32px;
+    font-weight: bold;
+}
+
 
 /* h1 {
     font-size: 48px;
 } */
 
-.services, .book {
+.button{
     /* margin-top: 5%;
     background-color: black;
     color:white;
     width: 20%;
     height: 10%; */
-    border: 1px solid black;
-    width: 25%;
+    width: 20%;
+    background-color: black;
+    color:white;
+    padding: 1%;
+}
+
+.services {
+    margin-top: 7%;
+    color:white;
+}
+
+.book {
+    background-color: white;
+    color:black;
+}
+
+.book , .read {
+    width: 120px;
+    height: 50px;
 }
 
 article {
-    border: 2px solid blue;
-    width: 40%;
+    width: 50%;
+    display:flex;
+    justify-content: space-between;
+    padding: 2%;
+    margin-top: 7%;
+    
+
 }
 article section{
-    border: 1px solid black;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    text-align: center;
+}
+
+article section img {
+    width: 75px;
+    height: 75px;
 }
 
 .bottom {
-    border: 1px solid black;
+    width: 50%;
+    display:flex;
+    justify-content: space-between;
+    padding: 2%;
+}
+
+.leftSect {
     width: 40%;
 }
+
+.bottom img {
+    width: 350px;
+    height: 250px;
+     margin-top:3%;
+}
+
+.leftSect h3 {
+    font-size: 28px;
+}
+
