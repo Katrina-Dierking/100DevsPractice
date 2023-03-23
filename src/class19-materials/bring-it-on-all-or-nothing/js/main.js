@@ -36,7 +36,7 @@ power(5,6)
 // OR
 const booString = (boo, str) => boo ? alert(str) : console.log(str)
 
-booString(5, "hi")
+booString(true, "hi")
 
 
 
