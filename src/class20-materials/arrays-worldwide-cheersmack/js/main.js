@@ -2,7 +2,13 @@
 
 
 function arrNum(num) {
-    for (let i =0; i<num.length; i++) {
+
+    let newArray = []; 
+    for (let i =0;  i <=num ; i++) {
+        newArray.push(i)
  
     }
+    return newArray
 }
+
+console.log(arrNum(5))
