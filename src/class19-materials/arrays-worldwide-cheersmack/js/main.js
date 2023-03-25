@@ -2,12 +2,13 @@
 
 function numArr(n) {
 
-
+let newArray = []
     for(let i = 1; i<=n; i++) {
-        console.log(Array.from(String(n), Number))
+       newArray.push(i)
     }
+    return newArray
 }
 
 console.log(numArr(10))
 
-/// not working yet. I'll keep trying
+/// nworking!!! Yay

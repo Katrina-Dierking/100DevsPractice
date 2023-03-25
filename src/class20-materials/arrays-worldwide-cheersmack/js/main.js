@@ -4,11 +4,11 @@
 function arrNum(num) {
 
     let newArray = []; 
-    for (let i =0;  i <=num ; i++) {
+    for (let i =1;  i <=num ; i++) {
         newArray.push(i)
  
     }
     return newArray
 }
 
-console.log(arrNum(5))
+console.log(arrNum(15))
