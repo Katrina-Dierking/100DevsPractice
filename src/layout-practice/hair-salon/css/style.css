@@ -15,7 +15,6 @@
 body {
     display:flex;
     flex-direction: column;
-    /* justify-content: space-around; */
     align-items: center;
     width: 100%;
 }
@@ -125,16 +124,7 @@ main section>section span {
 }
 
 
-/* h1 {
-    font-size: 48px;
-} */
-
 .button{
-    /* margin-top: 5%;
-    background-color: black;
-    color:white;
-    width: 20%;
-    height: 10%; */
     width: 20%;
     background-color: black;
     color:white;
@@ -199,3 +189,18 @@ article section img {
     font-size: 28px;
 }
 
+
+/* ////// MEDIA QUERIES //////////////// */
+
+@media only screen and (max-width: 867px) {
+  nav {
+    display:flex;
+    flex-direction: column;
+    width: 30vw;
+    border: 2px solid red;
+  }
+
+  nav a {
+    font-size: 10px;
+  }
+}
