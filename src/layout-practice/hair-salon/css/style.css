@@ -193,14 +193,33 @@ article section img {
 /* ////// MEDIA QUERIES //////////////// */
 
 @media only screen and (max-width: 867px) {
+
+    header {
+        display:flex;
+        flex-direction: column;
+        border: 2px solid blue;
+    }
+
+    header p, header nav+p {
+        font-size: 14px;
+    }
+
+
   nav {
     display:flex;
     flex-direction: column;
+    justify-content: left;
     width: 30vw;
     border: 2px solid red;
+    margin:0;
   }
 
   nav a {
     font-size: 10px;
+    padding: 1px 0;
+  }
+
+  main .title h1{
+    font-size: 24px;
   }
 }
