@@ -52,7 +52,7 @@ function hiAndLow(n1, n2, n3) {
 //     }
 // }
 
-const headsTails = () => Math.random < .5 ? 'heads' : "tails"
+const headsTails = () => Math.random() < .5 ? 'heads' : "tails"
 // console.log(headsTails());
 // console.log(headsTails());
 // console.log(headsTails());
