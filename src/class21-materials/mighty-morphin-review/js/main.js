@@ -10,8 +10,7 @@
 
 let str = "my head hurts"
 
-let substr = str.slice(-3)
-alert(substr)
+alert(str.slice(-3));
 
 // *Functions*
 // Create a function that takes in 5 numbers. Subtract all five from 100. Alert the absolute value of the difference. Call the function.
@@ -33,36 +32,45 @@ function hiAndLow(n1, n2, n3) {
     let min = Math.min(n1, n2, n3)
     let max = Math.max(n1, n2, n3)
 
-    alert(min)
-    alert(max)
+   console.log(`The lowest is ${min} and the highest is ${max}`)
 }
 
-console.log(hiAndLow(5, 6, 7))
+(hiAndLow(15, 6, 77))
 
 // *Conditionals*
 //Create a function that returns heads or tails randomly and as fairly as possible. Call the function.
 
 function headsTails () {
   
-    let heads = (1, 2, 3, 4, 5)
+    let result = Math.random()
 
 
-    if(Math.floor(Math.random()*10) + 1 === heads) {
-        return "heads"; 
+    if(result <.5){
+        return "heads"
     } else {
-        return "tails";
+        return "tails"
     }
 }
-alert(headsTails());
-alert(headsTails());
-alert(headsTails());
-alert(headsTails());
-alert(headsTails());
+// console.log(headsTails());
+// console.log(headsTails());
+// console.log(headsTails());
+// console.log(headsTails());
+// console.log(headsTails());
+// console.log(headsTails());
+// console.log(headsTails());
+// console.log(headsTails());
+// console.log(headsTails());
+// console.log(headsTails());
 
 
 //*Loops*
 //Create a function that takes in a number. Console log the result of heads or tails using the previous function x times where x is the number passed into the function. Call the function.
 
-function coin(num) {
-
+function coinFlip(num) {
+    for(let i =1; i <= num; i++) {
+        let result = headsTails()
+        console.log(result)
+    }
 }
+
+coinFlip(10)
