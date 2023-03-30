@@ -40,17 +40,19 @@ function hiAndLow(n1, n2, n3) {
 // *Conditionals*
 //Create a function that returns heads or tails randomly and as fairly as possible. Call the function.
 
-function headsTails () {
+// function headsTails () {
   
-    let result = Math.random()
+//     let result = Math.random()
 
 
-    if(result <.5){
-        return "heads"
-    } else {
-        return "tails"
-    }
-}
+//     if(result <.5){
+//         return "heads"
+//     } else {
+//         return "tails"
+//     }
+// }
+
+const headsTails = () => Math.random < .5 ? 'heads' : "tails"
 // console.log(headsTails());
 // console.log(headsTails());
 // console.log(headsTails());
