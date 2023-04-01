@@ -9,7 +9,17 @@ console.log(num.reduce((a,b)=> a+b, 0))
 //Create a function that takes in an array of numbers
 //Return a new array of numbers that is every original number squared
 
+function sqNums(a) {
+    let squared = [];
 
+    for (let i = 0; i < a.length; i++) {
+        squared.push(Math.pow(a[i], 2))
+    }
+
+    return squared;
+} 
+
+console.log(sqNums([2, 4, 6]))
 
 //Create a function that takes string
 //Print the reverse of that string to the console
