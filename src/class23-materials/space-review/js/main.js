@@ -21,6 +21,11 @@ function sqNums(a) {
 
 console.log(sqNums([2, 4, 6]))
 
+//or
+
+let newArr = nums => nums.map(num => num**2)
+console.log(newArr([2, 4, 6]))
+
 //Create a function that takes string
 //Print the reverse of that string to the console
 
