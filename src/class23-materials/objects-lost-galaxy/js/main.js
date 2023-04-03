@@ -1,22 +1,42 @@
 //Create a dog object that has four properties and three methods
 
-const dog = {
+
+let dog = {}
+
+dog.name = "lilly"
+dog.size = "medium"
+dog.gender = "female"
+dog.breed = "mutt"
+
+dog.bark = function(){
+    console.log('woof')
+}
+dog.run = function(){
+    console.log('super fast')
+}
+dog.eat = function() {
+    console.log('hamburger')
+}
+
+/// OR
+
+const dogTwo = {
     name : 'Spot', 
     age : 2, 
     gender: 'female', 
     size: 'small', 
    bark() {
-    return (`${dog.name} says roof`)
+    return (`${dogTwo.name} says roof`)
    }, 
    eat() {
-    return (`${dog.name}'s favorite food is hamgurger`)
+    return (`${dogTwo.name}'s favorite food is hamgurger`)
    }, 
    play() {
-       return (`${dog.name} loves to chase cats`)
+       return (`${dogTwo.name} loves to chase cats`)
 
    }
 }
 
-console.log(dog.bark())
-console.log(dog.eat())
-console.log(dog.play())
+console.log(dogTwo.bark())
+console.log(dogTwo.eat())
+console.log(dogTwo.play())
