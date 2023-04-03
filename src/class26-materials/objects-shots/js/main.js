@@ -9,7 +9,7 @@ function getDrink() {
     fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${drink}`)
         .then (res => res.json())
         .then(data => {
-            console.log(data.drinks[0])
+            console.log(data.drinks)
             document.querySelector('h2').innerText = data.drinks[0].strDrink
             document.querySelector("img").src = data.drinks[0].strDrinkThumb
             document.querySelector("h3").innerText = data.drinks[0].strInstructions;
@@ -19,3 +19,8 @@ function getDrink() {
             console.log(`err ${err}`)
         })
 }
+
+
+/// push -- get it to cycle through the images (random)
+
+// non push -- play with ${drink} to see how to work with drinks that have a space in them
