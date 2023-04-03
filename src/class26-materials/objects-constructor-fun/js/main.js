@@ -24,6 +24,6 @@ let Joann = new Crafter('joann', 34, 'her', '$18', ['clay', ' paint', ' and glue
 console.log(Joann.sells())
 console.log(Joann.works())
 
-Crafter.prototype.car = false
+Crafter.prototype.car = false // makes more sense to add it to the prototype rather than adding it to each instance
 
 console.log('Does Joann have a car?', Joann.car)
