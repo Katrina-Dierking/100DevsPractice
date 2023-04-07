@@ -31,3 +31,6 @@ let showOne = new Netflix('Virgin River', ' 8pm', 'Friday', 'RomCom')
 
 console.log(showOne.tuneIn())
 console.log(showOne.stop())
+
+let showTwo = new Netflix('Hunger Games', ' 9pm', 'Every day', 'sciFi')
+console.log(showTwo.tuneIn())
