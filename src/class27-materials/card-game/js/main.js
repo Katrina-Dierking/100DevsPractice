@@ -29,12 +29,40 @@ function drawTwo(){
       .then(data => {
         console.log(data)
         document.querySelector('#player1').src= data.cards[0].image
-      document.querySelector("#player2").src = data.cards[1].image;
+        document.querySelector("#player2").src = data.cards[1].image;
+
+        let player1Val = convertToNum(data.cards[0].value);
+        let player2Val = convertToNum(data.cards[1].value);
+
+        if(player1Val > player2Val) {
+          document.querySelector('h3').innerText = "Winner: Player 1"
+        } else if(player1Val < player2Val) {
+           document.querySelector('h3').innerText = "Winner: Player 2";
+        } else {
+          document.querySelector('h3').innerText = "war"
+        }
         
       })
       .catch(err => {
           console.log(`error ${err}`)
           console.log('its not working')
       });
+}
+
+
+//helper function
+
+function convertToNum(val) {
+  if(val === "ACE") {
+    return 14
+  } else if ( val === "KING") {
+    return 13
+  }  else if (val === "QUEEN") {
+      return 12
+  }  else if (val === "JACK") {
+      return 11
+  } else {
+    return Number(val);
+  }
 }
 
