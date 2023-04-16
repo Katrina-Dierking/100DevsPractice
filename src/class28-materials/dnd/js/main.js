@@ -20,6 +20,7 @@ function getFetch(){
             document.querySelector('ul').appendChild(li)
 
             // remove child from ul
+            li.remove()
         })
         .catch(err => {
           console.log(`error ${err}`)
