@@ -26,29 +26,35 @@ function getFetch(){
         console.log(data)
         let val1 = Number(cardValue( data.cards[0].value ))
         let val2 = Number(cardValue( data.cards[1].value ))
+    
         // document.querySelector('#player1').src = data.cards[0].image
         // document.querySelector('#player2').src = data.cards[1].image
 
         if(!localStorage.getItem('card1') && !localStorage.getItem('card2')) {
             localStorage.setItem('card1', Number(cardValue(data.cards[0].value )));
             localStorage.setItem('card2', Number(cardValue(data.cards[1].value)));
-          if(val1 > val2){
-            document.querySelector('h3').innerText = 'Player 1 WON!'
-          }else if(val1 < val2){
-            document.querySelector('h3').innerText = 'Player 2 WON!'
-          }else{
-            document.querySelector('h3').innerText = 'WAR!'
-          }
-        } else {
-          let card1 = localStorage.getItem('card1') + Number(cardValue(data.cards[0].value))
-          let card2 = localStorage.getItem('card2') + Number(cardValue(data.cards[1].value))
-          localStorage.setItem('card1', card1)
-          localStorage.setItem('card2', card2)
+          } else {
+            let card1 = localStorage.getItem('card1') + "-" + Number(cardValue(data.cards[0].value))
+            let card2 =
+            localStorage.getItem("card2") +
+            "-" +
+            Number(cardValue(data.cards[1].value));
+            // let winner = localStorage.getItem('winner') 
+            localStorage.setItem('card1', card1)
+            localStorage.setItem('card2', card2)
+            if(val1 > val2){
+              
+              document.querySelector('h3').innerText = 'Player 1 WON!'
+              }else if(val1 < val2){
+                document.querySelector('h3').innerText = 'Player 2 WON!'
+              }else{
+                document.querySelector('h3').innerText = 'WAR!'
+            }
         
         }
         
-            document.querySelector('h3').innerText = localStorage.getItem('card1')
-            document.querySelector('h3').innerText = localStorage.getItem('card2')
+            document.querySelector('#player1card').innerText = localStorage.getItem('card1')
+            document.querySelector('#player2card').innerText = localStorage.getItem('card2')
       })
       .catch(err => {
           console.log(`error ${err}`)
