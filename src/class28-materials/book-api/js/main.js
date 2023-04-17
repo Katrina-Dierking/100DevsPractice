@@ -1,10 +1,11 @@
 //Example fetch using pokemonapi.co
 document.querySelector('button').addEventListener('click', getFetch)
-   document.querySelector("h2").innerText = localStorage.getItem("books");
-   document.querySelector("h3").innerText = localStorage.getItem(
-     "contributors"
-   );
-   document.querySelector("p").innerText = localStorage.getItem("date");
+
+document.querySelector("h2").innerText = localStorage.getItem("books");
+  //  document.querySelector("h3").innerText = localStorage.getItem(
+  //    "contributors"
+  //  );
+  //  document.querySelector("p").innerText = localStorage.getItem("date");
 
 function getFetch(){
 
@@ -21,17 +22,11 @@ function getFetch(){
         if(!localStorage.getItem('books')) {
           localStorage.setItem('books', data.title)
         } else {
-          let books = localStorage.getItem('books') + " || " + data.title 
+          let books = localStorage.getItem("books") + " ; " + data.title
           localStorage.setItem('books', books)
         }
-        document.querySelector('h2').innerText = localStorage.getItem('books')
-
-        // localStorage.setItem('books', data.title)
-        // localStorage.setItem('contributors', data.contributions)
-        //  localStorage.setItem("date", data.publish_date);
-
-        // document.querySelector("h3").innerText = localStorage.getItem("contributors");
-        // document.querySelector("p").innerText = localStorage.getItem("date");
+        document.querySelector('h2').innerText += localStorage.getItem('books')
+      
       })
       .catch(err => {
           console.log(`error ${err}`)
