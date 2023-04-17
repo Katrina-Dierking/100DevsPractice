@@ -13,6 +13,8 @@ function getFetch(){
       .then(data => {
         console.log(data)
         document.querySelector('h2').innerText = data.title
+        document.querySelector('h3').innerText = data.contributions
+        document.querySelector('p').innerText = data.publish_date
       })
       .catch(err => {
           console.log(`error ${err}`)
