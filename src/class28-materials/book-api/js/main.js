@@ -2,9 +2,9 @@
 document.querySelector('button').addEventListener('click', getFetch)
 
 document.querySelector("h2").innerText = localStorage.getItem("books");
-  //  document.querySelector("h3").innerText = localStorage.getItem(
-  //    "contributors"
-  //  );
+document.querySelector("h3").innerText = localStorage.getItem(
+     "contributions"
+   );
   //  document.querySelector("p").innerText = localStorage.getItem("date");
 
 function getFetch(){
@@ -18,14 +18,21 @@ function getFetch(){
       .then(res => res.json()) // parse response as JSON
       .then(data => {
         console.log(data)
+        console.log(data.contributions)
+        // document.querySelector('h3').innerText = data.contributions
         // if there is nothing in localstorage, put something in there so we don't get null back
-        if(!localStorage.getItem('books')) {
-          localStorage.setItem('books', data.title)
+        if (!localStorage.getItem("books") && !localStorage.getItem("contributions")) {
+          localStorage.setItem("books", data.title);
+          localStorage.setItem("contributions", data.contributions)
         } else {
-          let books = localStorage.getItem("books") + " ; " + data.title
-          localStorage.setItem('books', books)
+          let books = localStorage.getItem("books") + " || " + data.title;
+          let contributions = localStorage.getItem("contributions") + "|| " + data.contributions;
+          localStorage.setItem("books", books);
+          localStorage.setItem("contributions", contributions)
+          
         }
-        document.querySelector('h2').innerText += localStorage.getItem('books')
+        document.querySelector('h2').innerText = localStorage.getItem('books')
+        document.querySelector('h3').innerText = localStorage.getItem("contributions")
       
       })
       .catch(err => {
