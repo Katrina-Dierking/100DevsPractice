@@ -34,12 +34,9 @@ function getFetch(){
             localStorage.setItem('card1', Number(cardValue(data.cards[0].value )));
             localStorage.setItem('card2', Number(cardValue(data.cards[1].value)));
           } else {
-            let card1 = localStorage.getItem('card1') + "-" + Number(cardValue(data.cards[0].value))
-            let card2 =
-            localStorage.getItem("card2") +
-            "-" +
-            Number(cardValue(data.cards[1].value));
-            // let winner = localStorage.getItem('winner') 
+            let card1 = localStorage.getItem('card1') + "Player Card1:" + Number(cardValue(data.cards[0].value)) + ", ";
+            let card2 = localStorage.getItem("card2") + "Player Card2:" + Number(cardValue(data.cards[1].value)) + ", ";
+         
             localStorage.setItem('card1', card1)
             localStorage.setItem('card2', card2)
             if(val1 > val2){
@@ -61,6 +58,7 @@ function getFetch(){
       });
 }
 
+//helper function
 function cardValue(val){
   if(val === "ACE"){
     return 14
