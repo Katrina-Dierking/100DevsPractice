@@ -5,7 +5,8 @@ async function getCuteDogs(){
 
         const res = await fetch('https://dog.ceo/api/breeds/image/random')
         const data = await res.json()
-        console.log(data)
+        console.log(data.message)
+        document.querySelector("img").src = data.message;
     }
     catch(err) {
         console.log(`error ${err}`)
@@ -15,3 +16,4 @@ async function getCuteDogs(){
 getCuteDogs();
 
 // add a try/catch block to async function
+//display the image on the DOM
