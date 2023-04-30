@@ -3,9 +3,17 @@
 
 const http = require('http');
 const fs = require('fs')
+
+//requests coming in
 const url = require('url');
 const querystring = require('querystring');
+
+// used for 404 - Has to be installed
 const figlet = require('figlet')
+
+///server code 
+// looks at what's being asked and gives a response
+// If it doesn't understand what you're asking for, it responds with a 404
 
 const server = http.createServer((req, res) => {
   const page = url.parse(req.url).pathname;
